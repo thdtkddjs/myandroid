@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--
+정렬일떄 자식 요소들은 width를 나눠가져야한다.
+weight는 폭을 나눠 갖는 비율이다.
+수직 정렬일 경우 height를, 수평 정렬일때는 width를 나눠갖는다.
+
+어디까지나 남는 폭을 나눠갖기 때문에 크기 자체가 다르다면 나눠갖는 크기를 같게 만들기 쉽지 않다.
+강제로 그렇게 하고자 한다면 모든 UI의 크기를 0dp로 설정한다음
+weight를 똑같이 부여하면 된다.
+-->
+    <Button
+        android:id="@+id/one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="구라의 버튼1"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="버튼2"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="버튼3"
+        android:layout_weight="1"/>
+</LinearLayout>

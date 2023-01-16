@@ -15,3 +15,12 @@ dependencyResolutionManagement {
 rootProject.name = "myandroid"
 include ':Step01activity'
 include ':step01activity2'
+include ':step02layout'
+include ':step03view'
+include ':steo04activitymove'
+include ':kotlin_test'
+include ':kotlin_test1'
+include ':step05listview5'
+include ':step05listview'
+include ':step05example'
+include ':step05customadapter'

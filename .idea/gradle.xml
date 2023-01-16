@@ -11,7 +11,16 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Step01activity" />
+            <option value="$PROJECT_DIR$/kotlin_test" />
+            <option value="$PROJECT_DIR$/kotlin_test1" />
+            <option value="$PROJECT_DIR$/steo04activitymove" />
             <option value="$PROJECT_DIR$/step01activity2" />
+            <option value="$PROJECT_DIR$/step02layout" />
+            <option value="$PROJECT_DIR$/step03view" />
+            <option value="$PROJECT_DIR$/step05customadapter" />
+            <option value="$PROJECT_DIR$/step05example" />
+            <option value="$PROJECT_DIR$/step05listview" />
+            <option value="$PROJECT_DIR$/step05listview5" />
           </set>
         </option>
       </GradleProjectSettings>
