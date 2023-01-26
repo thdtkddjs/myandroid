@@ -1,14 +1,19 @@
 package com.example.step13sharedpref
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceManager
+
 /*
 App에서 문자열을 영구 저장하는 방법(영구 저장이란 앱을 종료하고 다시 시작해도 불러올수 있는 문자열)
 1. 파일 입출력을 이용
@@ -56,6 +61,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        var pref=PreferenceManager.getDefaultSharedPreferences(this)
+        //액티비티가 활성화되는 시점에 설정에 저장된 값을 읽어온다.
+        val signature=pref.getString("signature","")
+        val reply=pref.getString("reply","")
+        val sync=pref.getBoolean("sync",false)
+        //값이 넘어왔는지 확인
+        Toast.makeText(this,signature+reply+sync,Toast.LENGTH_SHORT).show()
+    }
+
     override fun onClick(v: View?) {
         val msg=editText?.text.toString()//null이 가능한 변수인 경우에는 null일수도 있다는 의미에서 ?을 붙여줘야한다.
         //SharedPreference의 참조값 얻어오기
@@ -71,5 +87,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             .setNeutralButton("확인",null)
             .create()
             .show()
+    }
+    //옵션 메뉴를 구성하는 메소드
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        //menu/menu_main.xml 문서를 전개해서 메뉴 구성하기
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+    //옵션 아이템을 선택했을때 호출되는 메소드
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        //선택한 메뉴의 아이디 읽어오기
+        val id=item.itemId;
+        //만일 설정을 선택한 경우
+        if(id == R.id.setting){
+            //java라면 SettingsActivity.class였을 것이다.
+            val intent= Intent(this, SettingsActivity::class.java)
+            //SettingActivity를 시작하겠다는 의도를 전달한다.
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
