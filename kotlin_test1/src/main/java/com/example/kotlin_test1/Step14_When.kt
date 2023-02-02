@@ -10,5 +10,4 @@ fun main(){
         "sword" -> println("칼로 공격해요")
         else -> println("주먹으로 공격해요")
     }
-
 }

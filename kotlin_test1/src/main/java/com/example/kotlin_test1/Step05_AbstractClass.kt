@@ -14,7 +14,6 @@ class myWeapon:Weapon(){
 
 }
 
-
 fun main(){
     val m1 = myWeapon()
 

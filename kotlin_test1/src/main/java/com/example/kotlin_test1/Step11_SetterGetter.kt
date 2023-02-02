@@ -15,7 +15,6 @@ class StarBucks{
             }
         }
 }
-
 fun main(){
     val s1=StarBucks()
     s1.location="강남"  //값을 넣어줄때는 setter 가 호출

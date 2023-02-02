@@ -13,9 +13,11 @@ class Util{
         }
     }
 }
+
 fun main(){
     //Util().send()
     //java에서 static 함수를 구현하는 것을 구현하려면 위처럼 companion 을 사용해야한다.
     Util.send()
     println(Util.version)
 }
+
