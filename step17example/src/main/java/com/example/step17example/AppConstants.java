@@ -7,4 +7,5 @@ public class AppConstants {
     public static final int REQUEST_TODO_INSERT=999;
     //리스트를 불러오도록 할당된 int 값이 1000임을 표시
     public static final int REQUEST_TODO_LIST=1000;
+    public static final int REQUEST_TODO_DELETE=1001;
 }

@@ -51,7 +51,7 @@ public class TodoAdapter extends BaseAdapter {
         TextView text_content=convertView.findViewById(R.id.text_content);
         TextView text_regdate=convertView.findViewById(R.id.text_regdate);
         text_content.setText(dto.getContent());
-        text_content.setText(dto.getRegdate());
+        text_regdate.setText(dto.getRegdate());
         //View 를 리턴해준다.
         return convertView;
     }
